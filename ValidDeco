@@ -1,0 +1,15 @@
+package javavalidationprj.validate;
+
+public class ValidDeco implements ValidationService {
+      public ValidationService validservice;
+      
+      public ValidDeco(ValidationService validservice) {
+    	  this.validservice = validservice;
+      }
+
+      
+	@Override
+	public void valid(String value) throws Exception {
+				this.validservice.valid(value);
+	}
+}
